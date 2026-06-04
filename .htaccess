@@ -1,0 +1,54 @@
+Options -Indexes
+DirectoryIndex index.php about-us.php
+RewriteEngine On
+RewriteBase /aatren/
+#RewriteCond %{HTTP_HOST} !^localhost/aatren$ [NC]
+#RewriteRule ^(.*)$ http://localhost/aatren/$1 [L,R=301]
+
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+ Order Allow,Deny
+ Deny from all
+</FilesMatch>
+
+# stop hotlinking and serve alternate content
+# <IfModule mod_rewrite.c>
+#  RewriteEngine on
+#  RewriteCond %{HTTP_REFERER} !^$
+#  RewriteCond %{HTTP_REFERER} !^http://(www\.)?aatren\.com/.*$ [NC]
+#  RewriteRule .*\.(gif|jpg|png)$ - [F,L]
+# </ifModule>
+
+
+#========================================Admin Portal=====================================
+RewriteRule aatrenback/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ /aatren/aatrenback/$1.php?$2=$3&$4=$5&$6=$7&$8=$9 [L]
+RewriteRule aatrenback/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ /aatren/aatrenback/$1.php?$2=$3&$4=$5&$6=$7 [L]
+RewriteRule aatrenback/(.*)/(.*)/(.*)/(.*)/(.*)/$ /aatren/aatrenback/$1.php?$2=$3&$4=$5 [L]
+RewriteRule aatrenback/(.*)/(.*)/(.*)/$ /aatren/aatrenback/$1.php?$2=$3 [L]
+
+#========================================Users Portal=====================================
+RewriteRule users/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ /aatren/users/$1.php?$2=$3&$4=$5&$6=$7&$8=$9 [L]
+RewriteRule users/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ /aatren/users/$1.php?$2=$3&$4=$5&$6=$7 [L]
+RewriteRule users/(.*)/(.*)/(.*)/(.*)/(.*)/$ /aatren/users/$1.php?$2=$3&$4=$5 [L]
+RewriteRule users/(.*)/(.*)/(.*)/$ /aatren/users/$1.php?$2=$3 [L]
+
+#========================================Privates=====================================
+RewriteRule privates/(.*)/(.*)/(.*)/(.*)/(.*)/$ /aatren/privates/$1.php?$2=$3&$4=$5 [L]
+RewriteRule privates/(.*)/(.*)/(.*)/$ /aatren/privates/$1.php?$2=$3 [L]
+
+#========================================Categories=====================================
+RewriteRule cat/(.*)/(.*)/(.*)/$ /aatren/privates/items-cat.php?cat_slug=$1&$2=$3 [L]
+RewriteRule cat/(.*)/$ /aatren/privates/items-cat.php?cat_slug=$1 [L]
+
+#========================================Details=====================================
+RewriteRule details/(.*)/(.*)/(.*)/$ /aatren/privates/item-details.php?item_slug=$1&$2=$3 [L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z0-9]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ $1.php [NC,L]
+
+# provide a universal error document
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /aatren/error.php [L]

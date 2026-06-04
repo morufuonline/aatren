@@ -1,0 +1,346 @@
+<!--
+
+.home-show-wrapper{
+text-align:center;
+}
+.home-show{
+width:100%;
+max-width:1400px;
+margin:auto;
+}
+.home-show img{
+width:100%;
+max-width:1400px;
+}
+
+.home-body-wrapper{
+background:#fff;
+text-align:center;
+}
+.home-body{
+width:100%;
+max-width:1400px;
+padding:20px;
+}
+.home-body *{
+text-align:center;
+}
+.home-body a:hover{
+text-decoration:none;
+color:#333;
+}
+
+/*============== Inner Section ===============*/
+.home-section{
+display:table;
+margin:auto;
+padding:0px;
+}
+.home-section .section{
+display:table-cell;
+width:33.3333333333%;
+padding-top:20px;
+}
+@media(max-width:900px){
+.home-section{
+display:block;
+}
+.home-section .section{
+display:block;
+width:100%;
+height:auto;
+padding-top:20px;
+}
+}
+.home-section .section .inner-section{
+display:table;
+width:100%;
+}
+.home-section .section .inner-section .left, .home-section .section .inner-section .right{
+display:table-cell;
+padding:5px;
+}
+.home-section .section .inner-section .left{
+width:110px;
+text-align:right;
+}
+.home-section .section .inner-section .left i{
+padding:20px;
+padding-left:25px;
+padding-right:25px;
+background:#333;
+color:#fff;
+clear:both;
+margin-top:5px;
+font-size:40px;
+border-radius:50%; 
+-moz-border-radius:50%; 
+-webkit-border-radius:50%; 
+-khtml-border-radius:50%;
+}
+.home-section .section .inner-section .left i.website{
+background:#933;
+}
+.home-section .section .inner-section .left i.forum{
+background:#f33;
+padding-left:20px;
+padding-right:20px;
+}
+.home-section .section .inner-section .left i.blog{
+background:#099;
+}
+.home-section .section .inner-section .right *{
+text-align:left;
+}
+.home-section .section .inner-section .right .section-title{
+font-size:30px;
+padding-bottom:10px;
+}
+.home-section .section .inner-section .right .section-content{
+padding-right:10px;
+}
+.home-section .section .inner-section .right .section-content a{
+color:#f11;
+display:block;
+}
+.home-section .section .inner-section .right .section-content a:hover{
+text-decoration:underline !important;
+}
+.home-section .section .inner-section .right .services a{
+background:#f9f9f9 url(../images/link-bg.png) no-repeat left;
+padding:11px;
+padding-left:35px;
+display:block;
+color:#333;
+border-bottom:1px dashed #aaa;
+}
+.home-section .section .inner-section .right .services a:hover{
+background:#eee url(../images/link-bg.png) no-repeat left;
+color:#111;
+text-decoration:none !important;
+}
+
+.home-body .fa-thumbs-up, .home-body .fa-lock{
+background:#fff;
+color:#999;
+font-size:40px;
+padding:15px;
+padding-left:18px;
+padding-right:18px;
+border:1px solid #999;
+}
+.home-body .fa-lock{
+padding-left:23px;
+padding-right:23px;
+}
+.home-body .bottom-title{
+font-size:25px;
+text-align:left;
+padding-top:20px;
+border-bottom:2px solid #aaa;
+text-transform:capitalize;
+}
+.home-body p, .home-body ul li{
+text-align:left;
+}
+.home-body ul.strength{
+list-style-type:none;
+}
+.home-body ul.strength li{
+padding:9.5px;
+}
+
+#owl-content .item{
+  margin: 15px;
+  border:1px solid #eee;
+}
+#owl-content .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#owl-content .item div{
+padding:10px;
+background:#fbfbfb;
+}
+#owl-content .item div span{
+padding:10px;
+padding-left:0px;
+padding-right:0px;
+font-size:18px;
+font-weight:bold;
+float:left;
+}
+#owl-content .item div a{
+float:right;
+background:#f55;
+border:1px solid #f55;
+padding:10px;
+font-size:16px;
+color:#fff;
+}
+#owl-content .item div a:hover{
+color:#f55;
+background:#fff;
+}
+@media(max-width:600px){
+#owl-content .item{
+  margin: 5px;
+}
+}
+
+#tools .item{
+padding:10px;
+}
+
+/*======================Grid Wrapper==========================*/
+.projects-container{
+background: rgba(0,0,0,0.5);
+}
+.projects-title{
+color:#fff;
+font-size:40px;
+font-weight:bold;
+text-shadow: 2px 2px #666, -2px -2px 5px #666, -2px 0px 5px #666, 0px -2px 5px #666;
+}
+.grid-group{
+padding:20px;
+}
+.grid-group .grid-wrapper{
+float:left;
+padding:20px;
+width:33.3333333333%;
+}
+.grid-group .inner-wrapper{
+background:#fff;
+text-align:center;
+}
+.grid-group .read-more{
+padding:10px;
+background:#fbfbfb;
+display:table;
+width:100%;
+}
+.grid-group .read-more .read-more-title, .grid-group .read-more .read-more-link{
+display:table-cell;
+}
+.grid-group .read-more .read-more-title{
+vertical-align:middle;
+text-align:left;
+height:50px;
+}
+.grid-group .read-more .read-more-link{
+width:140px;
+}
+@media(max-width:950px){
+.grid-group .grid-wrapper{
+width:50%;
+}
+.grid-group .read-more, .grid-group .read-more .read-more-title, .grid-group .read-more .read-more-link{
+display:block;
+width:100%;
+}
+.grid-group .read-more .read-more-title{
+white-space:nowrap;
+}
+}
+@media(max-width:600px){
+.grid-group .grid-wrapper{
+float:none;
+padding-bottom:20px;
+padding-left:35px;
+padding-right:35px;
+width:auto;
+}
+}
+@media(max-width:500px){
+.grid-group .grid-wrapper{
+padding:0px;
+padding-top:10px;
+padding-bottom:10px;
+}
+}
+
+/*============== Posts Section ===============*/
+.post-wrapper, .post-content{
+display:table;
+margin:auto;
+padding:0px;
+width:100%;
+margin-top:10px;
+}
+.post-wrapper{
+padding:20px;
+margin-top:0px;
+padding-top:0px;
+}
+.post-wrapper .forum-posts, .post-wrapper .blog-posts{
+display:table-cell;
+width:50%;
+padding:20px;
+text-align:left;
+}
+.post-wrapper .content-header{
+margin-bottom:0px;
+}
+.post-content .post-img, .post-content .post{
+display:table-cell;
+padding:5px;
+text-align:left;
+}
+.post-content .post-img{
+width:100px;
+padding-left:0px;
+}
+.post{
+vertical-align:middle;
+}
+.post a{
+font-size:20px;
+color:#f11 !important;
+display:block;
+}
+.post a:hover{
+text-decoration:underline !important;
+}
+.post *{
+text-align:left;
+}
+.post-details{
+font-size:13px;
+color:#933;
+}
+@media(max-width:1000px){
+.post-wrapper{
+display:block;
+padding:0px;
+}
+.post-wrapper .forum-posts, .post-wrapper .blog-posts{
+display:block;
+width:100%;
+padding:10px;
+}
+}
+
+/*==================Carousel Items=======================*/
+.testimony{
+margin-bottom:0px;
+}
+.item div{
+padding:15px;
+}
+.item .item-stars{
+text-align:center;
+}
+.item .item-stars i{
+font-size:20px;
+color:#d8b767;
+}
+.item .item-body{
+text-align:justify;
+}
+.item .item-footer{
+text-align:right;
+}
+
+-->

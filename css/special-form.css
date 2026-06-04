@@ -1,0 +1,25 @@
+<!--
+.subscribe{
+padding-top:50px;
+} 
+.special-title, .subscribe label{
+font-weight:bold;
+}
+.subscribe label{
+color:#fff;
+}
+.subscribe form a{
+color:#f11;
+}
+.subscribe a:hover{
+text-decoration:underline !important;
+}
+.special-title{
+padding:20px;
+background:#fff;
+margin-bottom:10px;
+}
+.home-body-wrapper .subscribe form{
+background:rgba(0,0,0,0.7);
+}
+-->
